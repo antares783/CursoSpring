@@ -9,4 +9,8 @@
 
 	<context:component-scan base-package="mx.com.antares.ejemplo" />
 
+<bean id="mensaje" class="mx.com.antares.ejemplo.Saludo">
+	<property name="mensaje" value="Hola desde XML!!! Perros!!"></property>
+</bean>
+
 </beans>

@@ -1,6 +1,8 @@
 package mx.com.antares.ejemplo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import mx.com.antares.ejemplo.Saludo;
 
 
 /**
@@ -9,11 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExampleService implements Service {
 	
+	@Autowired
+	private Saludo saludo;
+	
 	/**
 	 * Reads next record from input
 	 */
 	public String getMessage() {
-		return "Hello world!";	
+		return saludo.getMensaje();	
 	}
 
 }
